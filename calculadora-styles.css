@@ -1,0 +1,91 @@
+body {
+  height: 100vh;
+  background-color: #333;
+}
+nav {
+  background-color: #3d40ff; /* Color de fondo del nav */
+  margin: 40px 0;
+}
+
+nav ul {
+  list-style-type: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  color: white; /* Color de texto de los enlaces */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Color de fondo cuando se pasa el mouse */
+}
+
+#calculator {
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 300px;
+}
+
+#display {
+  width: calc(100% - 40px);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.number-key, .operator-key, .clear-key, .calculate-key {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.number-key:active, .operator-key:active, .clear-key:active, .calculate-key:active {
+  transform: scale(1.1);
+}
+
+.number-key[data-value="+"], 
+.number-key[data-value="-"], 
+.number-key[data-value="*"], 
+.number-key[data-value="/"], 
+.number-key[data-value="="],
+.number-key[data-value="C"] {
+  background-color: #ffa500;
+}
+
+.button-key-active {
+  background-color: #ffa500 !important;
+  transform: scale(1.1);
+}

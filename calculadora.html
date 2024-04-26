@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Horizontal</title>
+  <link rel="stylesheet" href="calculadora-styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Precios</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+    </ul>
+  </nav>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="keys">
+      <button class="number-key" data-value="7" onclick="addToDisplay('7')">7</button>
+      <button class="number-key" data-value="8" onclick="addToDisplay('8')">8</button>
+      <button class="number-key" data-value="9" onclick="addToDisplay('9')">9</button>
+      <button class="operator-key" data-value="+" onclick="addToDisplay('+')">+</button>
+      <button class="number-key" data-value="4" onclick="addToDisplay('4')">4</button>
+      <button class="number-key" data-value="5" onclick="addToDisplay('5')">5</button>
+      <button class="number-key" data-value="6" onclick="addToDisplay('6')">6</button>
+      <button class="operator-key" data-value="-" onclick="addToDisplay('-')">-</button>
+      <button class="number-key" data-value="1" onclick="addToDisplay('1')">1</button>
+      <button class="number-key" data-value="2" onclick="addToDisplay('2')">2</button>
+      <button class="number-key" data-value="3" onclick="addToDisplay('3')">3</button>
+      <button class="operator-key" data-value="*" onclick="addToDisplay('*')">*</button>
+      <button class="number-key" data-value="0" onclick="addToDisplay('0')">0</button>
+      <button class="clear-key" data-value="C" onclick="clearDisplay()">C</button>
+      <button class="calculate-key" data-value="=" onclick="calculate()">=</button>
+      <button class="operator-key" data-value="/" onclick="addToDisplay('/')">/</button>
+    </div>
+  </div>
+  <script src="calculadora-script.js"></script>
+</body>
+</html>

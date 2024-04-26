@@ -1,0 +1,177 @@
+/* Estilos generales */
+/* Establece el color blanco para todos los elementos h1 y h2 */
+h1, h2 {
+  color: white;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Fondo oscuro */
+}
+
+nav {
+  background-color: #3d40ff; /* Color de fondo del nav */
+  margin: 40px 0;
+}
+
+nav ul {
+  list-style-type: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  color: white; /* Color de texto de los enlaces */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Color de fondo cuando se pasa el mouse */
+}
+/* Centrar vertical y horizontalmente el contenido de todo-entero */
+.todo-entero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* Ancho completo de la ventana */
+}
+
+/* Estilos para los contenedores principales */
+.calculadora-precios,
+.conversor-monedas {
+  width: 90%;
+  margin: 20px auto; /* Margen superior e inferior para mejorar la visualización */
+  padding: 20px;
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #2c2c2c; /* Fondo oscuro */
+  box-shadow: 0px 0px 20px rgba(0, 72, 255, 0.7); /* Sombra extravagante */
+}
+
+/* Estilos para los títulos y selectores */
+.seleccion-redes-sociales h2 {
+  color: #3d40ff; /* Naranja brillante */
+  font-size: 24px;
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.seleccion-redes-sociales select {
+  background-color: #404040; /* Fondo del select */
+  color: #fff; /* Texto blanco */
+  border: 2px solid #3d40ff; /* Borde naranja */
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px; /* Espacio debajo del selector */
+}
+
+.seleccion-redes-sociales select:hover {
+  background-color: #505050; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para las etiquetas y campos de entrada */
+label {
+  color: white; /* Naranja brillante */
+  font-size: 18px;
+  margin-bottom: 10px; /* Espacio debajo de la etiqueta */
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #3d40ff; /* Borde naranja */
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #404040; /* Fondo del input */
+  color: #fff; /* Texto blanco */
+  font-size: 16px;
+  margin-bottom: 20px; /* Espacio debajo del campo de entrada */
+}
+
+/* Estilos para los botones */
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3d40ff; /* Naranja brillante */
+  color: #fff; /* Texto blanco */
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #3d40ff; /* Naranja más claro al pasar el mouse */
+  box-shadow: 0px 0px 10px rgba(0, 72, 255, 0.7); /* Sombra extravagante al pasar el mouse */
+}
+
+/* Estilos para los resultados */
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  border: 3px solid #3d40ff; /* Borde naranja */
+  border-radius: 20px;
+  background-color: #404040; /* Fondo del resultado */
+  color: white; /* Naranja brillante */
+  font-size: 20px;
+  margin-bottom: 20px; /* Espacio debajo del resultado */
+}
+
+/* Estilos para los íconos */
+.icono-red-social {
+  color: #3d40ff; /* Naranja brillante */
+  font-size: 24px;
+  margin-right: 10px; /* Espacio a la derecha del ícono */
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .todo-entero {
+    flex-direction: column;
+  }
+  .caja-calculo {
+    flex-direction: column;
+  }
+  .caja-calculo label,
+  .caja-calculo input,
+  .caja-calculo button {
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilos para las sombras al seleccionar diferentes redes sociales */
+.calculadora-precios.instagram-active {
+  box-shadow: 0px 0px 20px rgba(0, 72, 255, 0.7);
+}
+
+.conversor-monedas.instagram-active {
+  box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.7);
+}
+
+.calculadora-precios.youtube-active,
+.conversor-monedas.youtube-active {
+  box-shadow: 0px 0px 20px rgba(0, 128, 0, 0.7);
+}
+
+.calculadora-precios.tiktok-active,
+.conversor-monedas.tiktok-active {
+  box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.7);
+}
