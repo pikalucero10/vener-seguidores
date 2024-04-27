@@ -1,5 +1,5 @@
 // Variables globales
-let tasaDeCambio = 1037; // Valor inicial del tipo de cambio
+let tasaDeCambio = 1050; // Valor inicial del tipo de cambio
 
 // Función para agregar opciones al selector de tipo de servicio
 function agregarOpciones(nombreServicio, opciones) {
@@ -366,8 +366,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Vistas-TikTok", [
             {
-              nombre: "🔵 ID 6789 - TikTok - Vistas | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🔵 ID 190 - TikTok - Vistas de Video - Max 10M - - ACTUALIZADO",
+              precio: 0.000007,
             },
           ]);
           break;
