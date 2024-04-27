@@ -32,7 +32,10 @@ function addToDisplay(value) {
     value = '.';
   }
 
-  display.value += value;
+  // Si el valor es un número o un operador, lo agregamos al display
+  if (!isNaN(value) || value === "+" || value === "-" || value === "*" || value === "/") {
+    display.value += value;
+  }
 }
 
 function clearDisplay() {
