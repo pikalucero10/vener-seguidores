@@ -1,15 +1,32 @@
+function copyToClipboard() {
+  const displayValue = document.getElementById("display").value;
+  navigator.clipboard.writeText(displayValue).then(function() {
+    console.log("Texto copiado al portapapeles: " + displayValue);
+  }, function(err) {
+    console.error("No se pudo copiar el texto: ", err);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("display").focus();
 });
 
 document.addEventListener("keydown", function(event) {
   const key = event.key;
-  if (!isNaN(key) || key === "+" || key === "-" || key === "*" || key === "/" || key === "Enter" || key === "Escape" || key === "Delete" || key === "Backspace" || key === ".") {
+  const display = document.getElementById("display");
+
+  // Evitar que se ejecute la acción predeterminada del navegador si el input está seleccionado
+  if (display === document.activeElement) {
+    event.preventDefault();
+  }
+
+  // Manejar las teclas permitidas
+  if (!isNaN(key) || key === "+" || key === "-" || key === "*" || key === "/" || key === "." || key === "Enter" || key === "Escape" || key === "Backspace" || key === "Delete") {
     if (key === "Enter") {
       calculate();
-    } else if (key === "Delete") {
+    } else if (key === "Escape") {
       clearDisplay();
-    } else if (key === "Backspace") {
+    } else if (key === "Delete" || key === "Backspace") {
       deleteLastCharacter();
     } else {
       addToDisplay(key);
@@ -22,24 +39,18 @@ function addToDisplay(value) {
   const display = document.getElementById("display");
   const currentValue = display.value;
 
-  // Si el valor es un punto o una coma y ya hay un punto en el display, no hacemos nada
-  if ((value === '.' || value === ',') && currentValue.includes('.')) {
+  // Verificar si el valor es un punto y si ya hay un punto directamente antes
+  if (value === '.' && currentValue.charAt(currentValue.length - 1) === '.') {
     return;
   }
 
-  // Reemplazamos la coma por un punto si es necesario
-  if (value === ',') {
-    value = '.';
-  }
-
-  // Si el valor es un número o un operador, lo agregamos al display
-  if (!isNaN(value) || value === "+" || value === "-" || value === "*" || value === "/") {
-    display.value += value;
-  }
+  // Agregar el valor al display
+  display.value += value;
 }
 
 function clearDisplay() {
-  document.getElementById("display").value = "";
+  const display = document.getElementById("display");
+  display.value = "";
 }
 
 function deleteLastCharacter() {
@@ -48,18 +59,21 @@ function deleteLastCharacter() {
 }
 
 function calculate() {
+  const display = document.getElementById("display");
   try {
-    const result = eval(document.getElementById("display").value);
-    document.getElementById("display").value = result;
+    const result = eval(display.value);
+    display.value = result;
   } catch (error) {
-    document.getElementById("display").value = "Error";
+    display.value = "Error";
   }
 }
 
 function highlightButton(key) {
   const button = document.querySelector(`[data-value="${key}"]`);
-  button.classList.add("button-key-active");
-  setTimeout(function() {
-    button.classList.remove("button-key-active");
-  }, 100);
+  if (button) {
+    button.classList.add("button-key-active");
+    setTimeout(function() {
+      button.classList.remove("button-key-active");
+    }, 100);
+  }
 }
