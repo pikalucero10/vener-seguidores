@@ -127,16 +127,6 @@ function actualizarPrecio() {
                 "🔵 ID 1760 - Instagram - Seguidores con apariencia real - R60 - Max. 500k (caídas de menos del 5%)",
               precio: 0.000628,
             },
-            {
-              nombre:
-                "🔴 6250 - 🙂 🇦🇷 Instagram Argentina Seguidores | Máx 100K | Alta Calidad | R30 | 5K Por Dia - $2.71 por 1000",
-              precio: 0.00271,
-            },
-            {
-              nombre:
-                "🔴 6579 - 🙂 Seguidores - Instagram | 100% Real Usuarios Organico | Calidad Premium - $2.30 por 1000",
-              precio: 0.0023,
-            },
           ]);
           break;
       }
@@ -150,11 +140,7 @@ function actualizarPrecio() {
                 "🔵 ID 3170 - Instagram - Me gusta - Alta calidad - Mundiales, Brasil, Latinos y USA - Max 20K 🔥",
               precio: 0.0001,
             },
-            {
-              nombre:
-                "🔴 6266 - ❤️ 🇦🇷 Instagram Argentina Like | Alta Calidad | R30 | 5K Por Dia - $0.98 por 1000",
-              precio: 0.00098,
-            },
+            
           ]);
           break;
       }
@@ -180,11 +166,6 @@ function actualizarPrecio() {
               nombre:
                 "🔵 ID 2060 - Instagram - Comentarios | 100% Perfil Real | Largo/Personalizado/Emoji",
               precio: 0.002,
-            },
-            {
-              nombre:
-                "🔴 6333 - 🇦🇷 Comentario - Instagram | Perfiles Argentinos | Max 30 - $0.98 por 1000",
-              precio: 0.00098,
             },
           ]);
           break;
@@ -304,8 +285,8 @@ function actualizarPrecio() {
         case "youtube":
           agregarOpciones("Seguidores-YouTube", [
             {
-              nombre: "🔵 ID 1234 - YouTube - Seguidores | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: " 7780 - 𝘾𝙃𝙀𝘼𝙋 📹 Youtube Subscribers | 30 Days Refill ♻️ | 500 Per Day - $3.25 por 1000",
+              precio: 0.00325,
             },
           ]);
           break;
@@ -316,8 +297,8 @@ function actualizarPrecio() {
         case "youtube":
           agregarOpciones("Likes-YouTube", [
             {
-              nombre: "🔵 ID 2345 - YouTube - Likes | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🔵 ID 3269 - Youtube - Me gusta en video - R30 - Max 5K",
+              precio: 0.000587,
             },
           ]);
           break;
@@ -328,20 +309,8 @@ function actualizarPrecio() {
         case "youtube":
           agregarOpciones("Vistas-YouTube", [
             {
-              nombre: "🔵 ID 3456 - YouTube - Vistas | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "Minutos":
-      switch (document.getElementById("redSocial").value) {
-        case "youtube":
-          agregarOpciones("Minutos-YouTube", [
-            {
-              nombre: "🔵 ID 4567 - YouTube - Minutos | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🎥 Youtube Views + %3-4 Like | Max 1M | Lifetime Guarantee | Low Drop | 5K Per Day",
+              precio: 0.00189,
             },
           ]);
           break;
@@ -354,8 +323,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Seguidores-TikTok", [
             {
-              nombre: "🔵 ID 5678 - TikTok - Seguidores | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🔵 ID 3091 - TikTok - Seguidores - Max 90k - R30 ⚡",
+              precio: 0.000782,
             },
           ]);
           break;
@@ -378,8 +347,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Likes-TikTok", [
             {
-              nombre: "🔵 ID 7890 - TikTok - Likes | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🔵 ID 195 - TikTok - Me gusta - Max 50K",
+              precio: 0.0006,
             },
           ]);
           break;
@@ -390,8 +359,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Vistas vivo-TikTok", [
             {
-              nombre: "🔵 ID 8901 - TikTok - Vistas en vivo | Rápido | R50 - $0.89 por 1000",
-              precio: 0.00089,
+              nombre: "🔵 ID 2884- TikTok - Vistas de transmisión en vivo (30 minutos) - Max 5k",
+              precio: 0.00069,
             },
           ]);
           break;
