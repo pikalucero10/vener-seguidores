@@ -2,13 +2,14 @@ body {
   height: 100vh;
   background-color: #333;
 }
+
 nav {
-  background-color: #3d40ff; /* Color de fondo del nav */
+  background-color: #3d40ff;
   margin: 40px 0;
 }
 
 nav ul {
-  list-style-type: none; /* Quita los puntos de lista */
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -25,33 +26,40 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: white; /* Color de texto de los enlaces */
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #555; /* Color de fondo cuando se pasa el mouse */
+  background-color: #555;
 }
 
-#calculator {
+.calculator {
   background-color: #444;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  width: 300px;
+  max-width: 90%; /* Ajustado al 90% del ancho de la pantalla */
+  margin: 0 auto; /* Centra la calculadora horizontalmente */
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
 }
 
 #display {
-  width: calc(100% - 40px);
-  margin-bottom: 10px;
+  flex: 1;
   padding: 10px;
   font-size: 24px;
   border: 1px solid #666;
   border-radius: 5px;
   background-color: #222;
   color: #fff;
+  margin: 10px; /* Añadido un margen a la derecha */
+  width: calc(100% - 10px); /* Ajuste para que el input ocupe el 100% con el margen */
 }
 
 .keys {
@@ -76,10 +84,10 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-.number-key[data-value="+"], 
-.number-key[data-value="-"], 
-.number-key[data-value="*"], 
-.number-key[data-value="/"], 
+.number-key[data-value="+"],
+.number-key[data-value="-"],
+.number-key[data-value="*"],
+.number-key[data-value="/"],
 .number-key[data-value="="],
 .number-key[data-value="C"] {
   background-color: #ffa500;
