@@ -90,6 +90,7 @@ label {
   color: white; /* Naranja brillante */
   font-size: 18px;
   margin-bottom: 10px; /* Espacio debajo de la etiqueta */
+  display: block;
 }
 
 input[type="number"],
