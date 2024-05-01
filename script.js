@@ -66,13 +66,6 @@ function agregarOpcionesInstagram() {
     <option value="Guardados">Guardados</option>
     <option value="comentarios">Comentarios</option>
     <option value="vistas-reels">Vistas Reels</option>
-    <option value="alcance">Alcance Instagram</option>
-    <option value="comentarios-personalizados">Comentarios Personalizados</option>
-    <option value="comentarios-aleatorios-masculinos">Comentarios Aleatorios Masculinos</option>
-    <option value="comentarios+likes-cuanta-verificada">1 Comentario + Me gusta - Cuentas verificadas</option>
-    <option value="vistas-todas-las-historias">Vistas a Todas las Historias</option>
-    <option value="vistas+likes-historias">Vistas de Historias + Likes</option>
-    <option value="perfil-instagram">Perfil Visita + Impresiones</option>
   `;
 }
 
@@ -177,107 +170,14 @@ function actualizarPrecio() {
           agregarOpciones("Vistas Reels-Instagram", [
             {
               nombre:
-                "🔵 ID 1643 - Instagram - Reels - Reproducciones | 30seg - 4min | Rápido | R5 - $0.89 por 1000",
-              precio: 0.00089,
+                "🔵ID 1733 - Instagram - Vistas - Max. 10M",
+              precio: 0.000075,
             },
           ]);
           break;
       }
       break;
-    case "alcance":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Alcance-Instagram", [
-            {
-              nombre:
-                "🔵 ID 2664 - Instagram - Alcance | 100% Rápido | Mundiales | R5 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "comentarios-personalizados":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Comentarios Personalizados-Instagram", [
-            {
-              nombre:
-                "🔵 ID 2845 - Instagram - Comentarios | Perfil Real | Aleatorio | Max 30 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "comentarios-aleatorios-masculinos":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Comentarios Aleatorios Masculinos-Instagram", [
-            {
-              nombre:
-                "🔵 ID 3113 - Instagram - Comentarios | Aleatorios | Masculinos | Max 30 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "comentarios+likes-cuanta-verificada":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones(
-            "1 Comentario + Me gusta - Cuentas verificadas-Instagram",
-            [
-              {
-                nombre:
-                  "🔵 ID 3206 - Instagram - Comentario + MG | Perfiles Verificados | R10 - $0.89 por 1000",
-                precio: 0.00089,
-              },
-            ]
-          );
-          break;
-      }
-      break;
-    case "vistas-todas-las-historias":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Vistas a Todas las Historias-Instagram", [
-            {
-              nombre:
-                "🔵 ID 3000 - Instagram - Vistas a todas las Historias | Rápido | 1K - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "vistas+likes-historias":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Vistas de Historias + Likes-Instagram", [
-            {
-              nombre:
-                "🔵 ID 3246 - Instagram - Vistas Historias + MG | Max 30 | R5 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
-    case "perfil-instagram":
-      switch (document.getElementById("redSocial").value) {
-        case "instagram":
-          agregarOpciones("Perfil Visita + Impresiones-Instagram", [
-            {
-              nombre:
-                "🔵 ID 2760 - Instagram - Perfil Visita + Impresiones | R5 - $0.89 por 1000",
-              precio: 0.00089,
-            },
-          ]);
-          break;
-      }
-      break;
+
 
     // SERVICIOS PARA YOUTUBE
     case "Seguidores":
