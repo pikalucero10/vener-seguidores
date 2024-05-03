@@ -108,8 +108,6 @@ function actualizarPrecio() {
   selectServicio.innerHTML = "";
 
   // Definir los precios para cada tipo de servicio
-
-  // SERVICIOS PARA INSTAGRAM
   switch (servicioSeleccionado) {
     case "seguidores":
       switch (document.getElementById("redSocial").value) {
@@ -306,12 +304,15 @@ function calcularPrecio() {
     return;
   }
 
+  // Obtener el tipo de cambio actual
+  const tipoCambioActual = parseFloat(document.getElementById("tipoCambioActual").value);
+
   // Calcular precios
   const precioSinGanancia = cantidadInput * precioPorUnidad;
   const precioConGanancia = precioSinGanancia * (1 + margenGanancia / 100);
-  const precioTotalPesosSinGanancia = precioSinGanancia * tasaDeCambio;
+  const precioTotalPesosSinGanancia = precioSinGanancia * tipoCambioActual;
   const precioTotalPesosConGanancia = redondearPrecio(
-    precioConGanancia * tasaDeCambio
+    precioConGanancia * tipoCambioActual
   );
 
   // Redondear hacia arriba al múltiplo de 10 más cercano
@@ -329,13 +330,6 @@ function calcularPrecio() {
 // Función para redondear hacia arriba al múltiplo de 10 más cercano
 function redondearHaciaArriba(numero, multiplo) {
   return Math.ceil(numero / multiplo) * multiplo;
-}
-
-// Función para actualizar el tipo de cambio
-function actualizarTipoDeCambio() {
-  tasaDeCambio = parseFloat(document.getElementById("tipoCambio").value);
-  // Después de actualizar el tipo de cambio, recalculamos el precio
-  calcularPrecio();
 }
 
 // Función para convertir dólares a pesos
@@ -370,8 +364,8 @@ function redondearPrecio(precio) {
 // Asignar eventos a los elementos del DOM
 document.getElementById("calcular").addEventListener("click", calcularPrecio);
 document
-  .getElementById("tipoCambio")
-  .addEventListener("change", actualizarTipoDeCambio);
+  .getElementById("tipoCambioActual")
+  .addEventListener("change", calcularPrecio);
 document
   .getElementById("cantidadDolares")
   .addEventListener("input", convertirAPesos);
@@ -385,7 +379,5 @@ document
   .getElementById("servicio")
   .addEventListener("change", actualizarPrecio);
 
-// Actualizar el tipo de cambio inicialmente
-actualizarTipoDeCambio();
 // Actualizar el tipo de red social inicialmente
 actualizarTipoDeRed();
