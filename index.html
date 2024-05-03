@@ -8,6 +8,11 @@
   <script defer src="script.js"></script> <!-- Script JavaScript para la funcionalidad -->
 </head>
 <body>
+  <section class="tipo-cambio">
+    <h2>Valor del dólar actual:</h2>
+    <input type="number" id="tipoCambioActual" value="1050" />
+    <button onclick="actualizarTipoDeCambio()">Actualizar</button>
+  </section>
   <nav>
     <ul>
       <li><a href="index.html">Precios</a></li>
@@ -57,8 +62,7 @@
       <input type="number" id="cantidadDolares" value="100" />
       <button onclick="convertirAPesos()">Convertir a Pesos</button>
       <div id="resultadoPesos" class="resultado"></div>
+    </div>
   </div>
-
-  <script src="script.js"></script> <!-- Script JavaScript para la funcionalidad -->
 </body>
 </html>
