@@ -207,8 +207,8 @@ function actualizarPrecio() {
         case "youtube":
           agregarOpciones("Vistas-YouTube", [
             {
-              nombre: "🎥 Youtube Views + %3-4 Like | Max 1M | Lifetime Guarantee | Low Drop | 5K Per Day",
-              precio: 0.00189,
+              nombre: "ID 2311 - YouTube - Vistas - Fuente FB+TW+IG - 1 a 2 minutos de retencion - Max 1M - R30",
+              precio: 0.002712,
             },
           ]);
           break;
