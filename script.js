@@ -342,34 +342,7 @@ function redondearHaciaArriba(numero, multiplo) {
   return Math.ceil(numero / multiplo) * multiplo;
 }
 
-// Función para convertir dólares a pesos
-function convertirAPesos() {
-  const cantidadUSD = parseFloat(
-    document.getElementById("cantidadDolares").value
-  );
-  const cantidadPesos = cantidadUSD * tasaDeCambio;
-  document.getElementById("resultadoPesos").innerText = `${cantidadUSD.toFixed(
-    2
-  )} dólares son ${cantidadPesos.toFixed(2)} pesos.`;
-}
 
-// Función para convertir pesos a dólares
-function convertirADolares() {
-  const cantidadPesos = parseFloat(
-    document.getElementById("cantidadPesos").value
-  );
-  const cantidadDolares = cantidadPesos / tasaDeCambio;
-  document.getElementById(
-    "resultadoDolares"
-  ).innerText = `${cantidadPesos.toFixed(
-    2
-  )} pesos son ${cantidadDolares.toFixed(2)} dólares.`;
-}
-
-// Función para redondear precios a dos decimales
-function redondearPrecio(precio) {
-  return Math.round(precio * 100) / 100;
-}
 
 // Asignar eventos a los elementos del DOM
 document.getElementById("calcular").addEventListener("click", calcularPrecio);
