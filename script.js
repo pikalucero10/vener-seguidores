@@ -118,6 +118,16 @@ function actualizarPrecio() {
                 "🔵 ID 1760 - Instagram - Seguidores con apariencia real - R60 - Max. 500k (caídas de menos del 5%)",
               precio: 0.000628,
             },
+            {
+              nombre:
+                "🔵 ID 963 - Instagram - Seguidores con apariencia real - SIN CAIDAS - Max. 50K (caídas de menos del 5%)",
+              precio: 0.001176,
+            },
+            {
+              nombre:
+                "🔵 ID 80 - Instagram Cuentas Verificadas 4 Seguidores",
+              precio: 5.933,
+            },
           ]);
           break;
       }
