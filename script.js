@@ -297,17 +297,14 @@ function mostrarDescripcion(nombreServicio, descripcion) {
   const descripcionElemento = document.getElementById("descripcionServicio");
   descripcionElemento.innerHTML = `<strong>${nombreServicio}:</strong> ${descripcion}`;
 }
-
-// Función para calcular el precio de compra y venta
 function calcularPrecio() {
   const cantidadInput = parseFloat(document.getElementById("cantidad").value);
-  const precioPorUnidad = parseFloat(
-    document.getElementById("tipoServicio").value
-  );
+  const porcentajeCaidas = parseFloat(document.getElementById("caidas").value);
+  const precioPorUnidad = parseFloat(document.getElementById("tipoServicio").value);
   const margenGanancia = parseFloat(document.getElementById("ganancia").value);
 
   // Verificar validez de los valores de entrada
-  if (isNaN(cantidadInput) || isNaN(precioPorUnidad) || isNaN(margenGanancia)) {
+  if (isNaN(cantidadInput) || isNaN(porcentajeCaidas) || isNaN(precioPorUnidad) || isNaN(margenGanancia)) {
     // Mostrar mensaje de error
     const resultadoElemento = document.getElementById("resultado");
     resultadoElemento.innerHTML = "Por favor, introduce números válidos.";
@@ -317,50 +314,40 @@ function calcularPrecio() {
   // Obtener el tipo de cambio actual
   const tipoCambioActual = parseFloat(document.getElementById("tipoCambioActual").value);
 
+  // Calcular cantidad con caídas
+  const cantidadConCaidas = cantidadInput * (1 + porcentajeCaidas / 100);
+
   // Calcular precios
-  const precioSinGanancia = cantidadInput * precioPorUnidad;
+  const precioSinGanancia = cantidadConCaidas * precioPorUnidad;
   const precioConGanancia = precioSinGanancia * (1 + margenGanancia / 100);
   const precioTotalPesosSinGanancia = precioSinGanancia * tipoCambioActual;
-  const precioTotalPesosConGanancia = redondearPrecio(
+  const precioTotalPesosConGanancia = redondearHaciaArriba(
     precioConGanancia * tipoCambioActual
   );
 
   // Redondear hacia arriba al múltiplo de 10 más cercano
   const precioTotalPesosConGananciaRedondeado = redondearHaciaArriba(precioTotalPesosConGanancia, 10);
 
+  // Calcular cantidad total
+  const cantidadTotal = cantidadInput + cantidadInput * (porcentajeCaidas / 100);
+
   // Mostrar resultado
   const resultadoElemento = document.getElementById("resultado");
-  resultadoElemento.innerHTML = `Compras los ${cantidadInput} a ${precioTotalPesosSinGanancia.toFixed(
+  resultadoElemento.innerHTML = `Compras ${cantidadInput} + (${porcentajeCaidas}% = ${cantidadTotal.toFixed(2)}) a ${precioTotalPesosSinGanancia.toFixed(
     2
   )} pesos y los tienes que vender a ${precioTotalPesosConGananciaRedondeado.toFixed(
     2
   )} pesos.`;
 }
 
+
 // Función para redondear hacia arriba al múltiplo de 10 más cercano
-function redondearHaciaArriba(numero, multiplo) {
+function redondearHaciaArriba(numero, multiplo = 1) {
   return Math.ceil(numero / multiplo) * multiplo;
 }
 
-
-
-// Asignar eventos a los elementos del DOM
-document.getElementById("calcular").addEventListener("click", calcularPrecio);
-document
-  .getElementById("tipoCambioActual")
-  .addEventListener("change", calcularPrecio);
-document
-  .getElementById("cantidadDolares")
-  .addEventListener("input", convertirAPesos);
-document
-  .getElementById("cantidadPesos")
-  .addEventListener("input", convertirADolares);
-document
-  .getElementById("redSocial")
-  .addEventListener("change", actualizarTipoDeRed);
-document
-  .getElementById("servicio")
-  .addEventListener("change", actualizarPrecio);
+// Asignar evento de cambio a los elementos del DOM
+document.getElementById("tipoCambioActual").addEventListener("change", calcularPrecio);
 
 // Actualizar el tipo de red social inicialmente
 actualizarTipoDeRed();
