@@ -141,6 +141,16 @@ function actualizarPrecio() {
                 "🔵 ID 3170 - Instagram - Me gusta - Alta calidad - Mundiales, Brasil, Latinos y USA - Max 20K 🔥",
               precio: 0.0001,
             },
+            {
+              nombre:
+                "🔵 ID 1346 - Instagram - Me gusta - América Latina- Max. 5k - R30 (CAIDA 4%)",
+              precio: 0.0012,
+            },
+            {
+              nombre:
+                "🔵 Instagram - cuentas verificadas - 1 =  5 me gusta	",
+              precio: 2.067,
+            },
             
           ]);
           break;
