@@ -246,8 +246,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Seguidores-TikTok", [
             {
-              nombre: "🔵 ID 3091 - TikTok - Seguidores - Max 90k - R30 ⚡",
-              precio: 0.000782,
+              nombre: "🔵 ID 3102 - TikTok - Seguidores con apariencia real - Max 70k - R30",
+              precio: 0.00238,
             },
           ]);
           break;
@@ -258,8 +258,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Vistas-TikTok", [
             {
-              nombre: "🔵 ID 190 - TikTok - Vistas de Video - Max 10M - - ACTUALIZADO",
-              precio: 0.000007,
+              nombre: "🔵 ID 3349 - TikTok - Vistas de Video - Max 1000M - ACTUALIZADO",
+              precio: 0.000002,
             },
           ]);
           break;
@@ -270,8 +270,8 @@ function actualizarPrecio() {
         case "tiktok":
           agregarOpciones("Likes-TikTok", [
             {
-              nombre: "🔵 ID 195 - TikTok - Me gusta - Max 50K",
-              precio: 0.0006,
+              nombre: "🔵 ID 2102 - TikTok - Me gusta - Max 100K (Caída: 3% al 5%)",
+              precio: 0.00049,
             },
           ]);
           break;
