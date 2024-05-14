@@ -191,6 +191,11 @@ function actualizarPrecio() {
                 "🔵ID 1733 - Instagram - Vistas - Max. 10M",
               precio: 0.000075,
             },
+            {
+              nombre:
+                "🔵ID 3387 - Instagram - Vistas Video/Reel (mas barato a prueba)",
+              precio: 0.000048,
+            },
           ]);
           break;
       }
